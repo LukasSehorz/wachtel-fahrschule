@@ -1,0 +1,15 @@
+# Arbeitsmaterial: Screenshots, Rohabzüge der Bestandsseite, Prüfskripte.
+# Enthält u. a. den kie.ai-Schlüssel und ~53 MB Bilddaten — gehört nicht ins Repo.
+_research/
+
+# macOS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+node_modules/
+
+# Alte Fassung mit dem Fahrlehrer — ersetzt durch praxis-fahrschueler.jpg
+assets/img/praxis-fahrstunde.jpg
