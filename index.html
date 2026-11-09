@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=202611091620">
 </head>
 <body>
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -29,10 +29,6 @@
         Anfahrt</a></li>
     </ul>
     <div class="topbar__actions">
-      <button class="topbar__login" type="button" data-login-open>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-        <span>Login</span>
-      </button>
       <a class="topbar__cta" href="anmeldung.html">Neuanmeldung
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
@@ -45,11 +41,7 @@
   <div class="container">
     <nav class="nav" aria-label="Hauptnavigation">
       <a class="logo" href="index.html" aria-label="Fahrschule Wachtel – zur Startseite">
-        <span class="logo__mark"><span>W</span></span>
-        <span class="logo__text">
-          <span class="logo__sup">Fahrschule</span>
-          <span class="logo__name">Wachtel</span>
-        </span>
+        <img class="logo__img" src="assets/img/logo-wachtel.jpg" width="252" height="150" alt="Fahrschule Wachtel – www.fahrschule-wachtel.de">
       </a>
 
       <ul class="nav__menu" id="primary-menu">
@@ -68,6 +60,7 @@
             <li><a href="theorie.html">Theorie</a></li>
           </ul>
         </li>
+        <li><a class="nav__link nav__link--price" href="preise.html">Preise</a></li>
         <li><a class="nav__link" href="formalitaeten.html">Formalitäten</a></li>
         <li><a class="nav__link" href="filialen.html">Filialen</a></li>
         <li><a class="nav__link" href="filialen.html#buerozeiten">Bürozeiten</a></li>
@@ -119,7 +112,7 @@
   </section>
 
   <!-- ================= S2 · HINWEIS / USP ================= -->
-  <section class="section section--tight">
+  <section class="section section--tight section--yellow">
     <div class="container">
       <div class="notice-grid" data-stagger>
         <div class="notice notice--red reveal">
@@ -145,7 +138,7 @@
   </section>
 
   <!-- ================= S3 · KLASSEN ================= -->
-  <section class="section" id="klassen">
+  <section class="section section--yellow" id="klassen">
     <div class="container">
       <div class="section-head">
         <span class="kicker">Ausbildung</span>
@@ -197,8 +190,36 @@
       </div>
 
       <div class="actions mt-lg">
+        <a class="btn btn--primary" href="preise.html">Preise ansehen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn--ghost" href="fuehrerscheinklassen.html">Alle Führerscheinklassen im Detail
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S3b · PREISE ================= -->
+  <section class="section" id="preise">
+    <div class="container">
+      <div class="price-home">
+        <div class="reveal">
+          <span class="kicker">Preise</span>
+          <h2 class="fill-text mt-sm">Faire Preise – auf einen Blick</h2>
+          <p class="lead mt-md">Preise vergleichen lohnt sich! Hier siehst du die wichtigsten Preise unserer beliebtesten Klassen. Alle weiteren Preise, Kombi-Klassen und Extras findest du auf unserer Preisseite.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="preise.html">Alle Preise ansehen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="ptable-card">
+            <table class="ptable">
+              <thead><tr><th scope="col">Klasse</th><th scope="col" class="num">Grundbetrag</th><th scope="col" class="num">Fahrstunde</th><th scope="col" class="num">Prakt. Prüfung*</th></tr></thead>
+              <tbody><tr><th scope="row"><span class="ptag">B</span></th><td class="num price">375&nbsp;€</td><td class="num price">65&nbsp;€</td><td class="num price">200&nbsp;€</td></tr><tr><th scope="row"><span class="ptag">BE</span></th><td class="num price">100&nbsp;€</td><td class="num price">75&nbsp;€</td><td class="num price">200&nbsp;€</td></tr><tr><th scope="row"><span class="ptag">A</span></th><td class="num price">399&nbsp;€</td><td class="num price">75&nbsp;€</td><td class="num price">250&nbsp;€</td></tr><tr><th scope="row"><span class="ptag">A2</span></th><td class="num price">399&nbsp;€</td><td class="num price">75&nbsp;€</td><td class="num price">250&nbsp;€</td></tr><tr><th scope="row"><span class="ptag">A1</span></th><td class="num price">399&nbsp;€</td><td class="num price">75&nbsp;€</td><td class="num price">250&nbsp;€</td></tr><tr><th scope="row"><span class="ptag">AM</span></th><td class="num price">349&nbsp;€</td><td class="num price">75&nbsp;€</td><td class="num price">200&nbsp;€</td></tr></tbody>
+            </table>
+          </div>
+          <p class="price-home__note">Fahrstunde je 45 Minuten. * Vorstellungsentgelt, zzgl. amtlicher Gebühren der Prüforganisation.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -229,6 +250,23 @@
           <img src="assets/img/praxis-fahrschueler.jpg" width="740" height="1198" loading="lazy"
                alt="Fahrschülerin am Steuer eines VW während einer Fahrstunde">
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S4b · FAHRZEUGE & FAHRSCHULE ================= -->
+  <section class="section section--yellow-strong section--photos" id="fahrzeuge">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Unsere Fahrzeuge</span>
+        <h2 class="fill-text">Moderne Fahrschulautos und unsere Fahrschule vor Ort</h2>
+      </div>
+      <div class="photo-strip reveal">
+        <a class="photo-strip__item" href="assets/img/flotte-reihe.jpg"><img src="assets/img/flotte-reihe.jpg" loading="lazy" alt="Fahrschulautos der Fahrschule Wachtel in einer Reihe geparkt"></a>
+        <a class="photo-strip__item" href="assets/img/fahrschulauto-seite.jpg"><img src="assets/img/fahrschulauto-seite.jpg" loading="lazy" alt="Blauer VW T-Roc mit Beschriftung Fahrschule Wachtel"></a>
+        <a class="photo-strip__item" href="assets/img/fahrschulauto-front.jpg"><img src="assets/img/fahrschulauto-front.jpg" loading="lazy" alt="Fahrschulauto der Fahrschule Wachtel vor dem Fahrschulschild"></a>
+        <a class="photo-strip__item" href="assets/img/filiale-schaufenster.jpg"><img src="assets/img/filiale-schaufenster.jpg" loading="lazy" alt="Schaufenster und Eingang der Fahrschule Wachtel"></a>
+        <a class="photo-strip__item photo-strip__item--sign" href="assets/img/schild-wachtel.jpg"><img src="assets/img/schild-wachtel.jpg" loading="lazy" alt="Gelbes Schild der Fahrschule Wachtel mit Zeiten für Info, Anmeldung und Unterricht"></a>
       </div>
     </div>
   </section>
@@ -342,7 +380,7 @@
   <hr class="divider">
 
   <!-- ================= S6 · CHECKLISTE ================= -->
-  <section class="section" id="checkliste">
+  <section class="section section--yellow" id="checkliste">
     <div class="container">
       <div class="section-head">
         <span class="kicker">Checkliste</span>
@@ -364,7 +402,7 @@
         <article class="num-card reveal">
           <span class="num-card__n">3</span>
           <h3>Erste Hilfe Bescheinigung</h3>
-          <p>Teilnahme an einem „Erste-Hilfe-Kurs“ oder „Lebensrettende Sofortmaßnahmen am Unfallort“</p>
+          <p>Teilnahme an einem „Erste-Hilfe-Kurs“</p>
         </article>
         <article class="num-card reveal">
           <span class="num-card__n">4</span>
@@ -379,7 +417,7 @@
         <article class="num-card reveal">
           <span class="num-card__n">6</span>
           <h3>Geld für die Gebühren</h3>
-          <p>bei Ersterwerb 43,40 Euro oder bei einer Erweiterung ca. 42,60 Euro</p>
+          <p>Gebühren für den Führerscheinantrag bei der Behörde: ca. 50&nbsp;Euro</p>
         </article>
       </div>
 
@@ -395,7 +433,7 @@
   <hr class="divider">
 
   <!-- ================= S7 · B197 / B196 ================= -->
-  <section class="section">
+  <section class="section section--yellow-strong">
     <div class="container">
       <div class="section-head section-head--center">
         <span class="kicker kicker--plain">Erweiterungen</span>
@@ -423,7 +461,7 @@
   <hr class="divider">
 
   <!-- ================= S8 · FILIALEN ================= -->
-  <section class="section" id="filialen">
+  <section class="section section--yellow" id="filialen">
     <div class="container">
       <div class="section-head">
         <span class="kicker">Standorte</span>
@@ -435,6 +473,11 @@
           <div class="location__head">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <h3>Freising</h3>
+            <span class="closed-tag">Vorübergehend geschlossen</span>
+          </div>
+          <div class="closed-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+            <p><strong>Vorübergehend geschlossen:</strong> Unsere Filiale in Freising ist aufgrund von Renovierungsarbeiten vorübergehend geschlossen. Unsere Filiale in Allershausen ist weiterhin für dich da.</p>
           </div>
           <p>Direkt in der Altstadt von Freising gelegen befindet sich unser Hauptsitz. Wenn Sie noch Fragen rund um den Führerschein haben kommen Sie vorbei, wir stehen Ihnen gerne Rede und Antwort.</p>
           <div class="info-grid">
@@ -510,9 +553,9 @@
             <ul>
               <li>ein aktuelles biometrisches Lichtbild</li>
               <li>deinen Personalausweis oder Reisepass mit Meldebescheinigung und natürlich der aktuell gültigen Anschrift</li>
-              <li>Bescheinigung über die Teilnahme an einem „Erste-Hilfe-Kurs“ oder „Lebensrettende Sofortmaßnahmen am Unfallort“</li>
+              <li>Bescheinigung über die Teilnahme an einem „Erste-Hilfe-Kurs“</li>
               <li>ein aktueller Sehtest (nicht älter als 24 Monate), kann beim Optiker oder Augenarzt gemacht werden</li>
-              <li>Gebühren für den Führerscheinantrag, bei Ersterwerb 43,40 Euro oder bei einer Erweiterung ca. 42,60 Euro</li>
+              <li>Gebühren für den Führerscheinantrag bei der Behörde: ca. 50&nbsp;Euro</li>
             </ul>
           </div>
         </details>
@@ -635,7 +678,7 @@
               <div>
                 <div class="contact-row__label">Öffnungszeiten</div>
                 <div class="contact-row__value">
-                  <strong>Freising:</strong> Montag 17.30 – 18.30 Uhr,<br>Donnerstag 17.30 – 18.30 Uhr<br>
+                  <strong>Freising:</strong> vorübergehend geschlossen (Renovierung)<br>
                   <strong>Allershausen:</strong> Dienstag und Mittwoch<br>18.00 – 18.30 Uhr
                 </div>
               </div>
@@ -703,11 +746,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="logo logo--on-dark">
-          <span class="logo__mark"><span>W</span></span>
-          <span class="logo__text">
-            <span class="logo__sup">Fahrschule</span>
-            <span class="logo__name">Wachtel</span>
-          </span>
+          <img class="logo__img" src="assets/img/logo-wachtel.jpg" width="252" height="150" alt="Fahrschule Wachtel – www.fahrschule-wachtel.de">
         </span>
         <p>In Freising kannst du in der Fahrschule Wachtel deine Ausbildung zum Führerschein für Motorrad und Pkw absolvieren.</p>
       </div>
@@ -733,6 +772,7 @@
       <div>
         <h4>Informationen</h4>
         <nav class="footer-links" aria-label="Weitere Informationen">
+          <a href="preise.html">Preise</a>
           <a href="fuehrerscheinklassen.html">Führerscheinklassen</a>
           <a href="pruefungsrichtlinie.html">Prüfungsrichtlinie</a>
           <a href="praxis.html">Praxis</a>
@@ -746,8 +786,7 @@
         <div class="footer-hours">
           <div>
             <strong>Freising</strong>
-            Montag 17.30 Uhr bis 18.30 Uhr<br>
-            Donnerstag 17.30 Uhr bis 18.30 Uhr
+            <span class="closed-tag">Vorübergehend geschlossen</span><br>Wegen Renovierungsarbeiten
           </div>
           <div>
             <strong>Allershausen</strong>
@@ -769,37 +808,9 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=202611091620" defer></script>
+<script src="assets/js/gallery.js?v=202611091620" defer></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-<!-- ================= LOGIN-DIALOG ================= -->
-<dialog class="login-dialog" id="login-dialog" aria-labelledby="login-title">
-  <div class="login-dialog__inner">
-    <button class="login-dialog__close" type="button" data-login-close aria-label="Login schließen">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-    </button>
-    <span class="login-dialog__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-    <h2 id="login-title">Login Lerncenter</h2>
-    <p class="login-dialog__sub">Melde dich mit deinen Zugangsdaten an und lerne Theorie am Ort deiner Wahl.</p>
-
-    <form class="login-form" id="login-form" novalidate>
-      <div class="field">
-        <label for="login-user">Benutzername</label>
-        <input id="login-user" name="user" type="text" autocomplete="username" required>
-      </div>
-      <div class="field">
-        <label for="login-pass">Passwort</label>
-        <input id="login-pass" name="pass" type="password" autocomplete="current-password" required>
-      </div>
-      <button class="btn btn--primary btn--block" type="submit">Anmelden
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-      <p class="login-dialog__note" id="login-note" hidden></p>
-    </form>
-
-    <p class="login-dialog__foot">Noch kein Account? <a href="anmeldung.html">Neuanmeldung</a></p>
-  </div>
-</dialog>
 
 </body>
 </html>

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=202611091620">
 </head>
 <body>
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -29,10 +29,6 @@
         Anfahrt</a></li>
     </ul>
     <div class="topbar__actions">
-      <button class="topbar__login" type="button" data-login-open>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-        <span>Login</span>
-      </button>
       <a class="topbar__cta" href="anmeldung.html">Neuanmeldung
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
@@ -45,11 +41,7 @@
   <div class="container">
     <nav class="nav" aria-label="Hauptnavigation">
       <a class="logo" href="index.html" aria-label="Fahrschule Wachtel – zur Startseite">
-        <span class="logo__mark"><span>W</span></span>
-        <span class="logo__text">
-          <span class="logo__sup">Fahrschule</span>
-          <span class="logo__name">Wachtel</span>
-        </span>
+        <img class="logo__img" src="assets/img/logo-wachtel.jpg" width="252" height="150" alt="Fahrschule Wachtel – www.fahrschule-wachtel.de">
       </a>
 
       <ul class="nav__menu" id="primary-menu">
@@ -68,6 +60,7 @@
             <li><a href="theorie.html">Theorie</a></li>
           </ul>
         </li>
+        <li><a class="nav__link nav__link--price" href="preise.html">Preise</a></li>
         <li><a class="nav__link" href="formalitaeten.html">Formalitäten</a></li>
         <li><a class="nav__link" href="filialen.html">Filialen</a></li>
         <li><a class="nav__link" href="filialen.html#buerozeiten">Bürozeiten</a></li>
@@ -310,11 +303,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="logo logo--on-dark">
-          <span class="logo__mark"><span>W</span></span>
-          <span class="logo__text">
-            <span class="logo__sup">Fahrschule</span>
-            <span class="logo__name">Wachtel</span>
-          </span>
+          <img class="logo__img" src="assets/img/logo-wachtel.jpg" width="252" height="150" alt="Fahrschule Wachtel – www.fahrschule-wachtel.de">
         </span>
         <p>In Freising kannst du in der Fahrschule Wachtel deine Ausbildung zum Führerschein für Motorrad und Pkw absolvieren.</p>
       </div>
@@ -340,6 +329,7 @@
       <div>
         <h4>Informationen</h4>
         <nav class="footer-links" aria-label="Weitere Informationen">
+          <a href="preise.html">Preise</a>
           <a href="fuehrerscheinklassen.html">Führerscheinklassen</a>
           <a href="pruefungsrichtlinie.html">Prüfungsrichtlinie</a>
           <a href="praxis.html">Praxis</a>
@@ -353,8 +343,7 @@
         <div class="footer-hours">
           <div>
             <strong>Freising</strong>
-            Montag 17.30 Uhr bis 18.30 Uhr<br>
-            Donnerstag 17.30 Uhr bis 18.30 Uhr
+            <span class="closed-tag">Vorübergehend geschlossen</span><br>Wegen Renovierungsarbeiten
           </div>
           <div>
             <strong>Allershausen</strong>
@@ -376,37 +365,8 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=202611091620" defer></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-<!-- ================= LOGIN-DIALOG ================= -->
-<dialog class="login-dialog" id="login-dialog" aria-labelledby="login-title">
-  <div class="login-dialog__inner">
-    <button class="login-dialog__close" type="button" data-login-close aria-label="Login schließen">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-    </button>
-    <span class="login-dialog__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-    <h2 id="login-title">Login Lerncenter</h2>
-    <p class="login-dialog__sub">Melde dich mit deinen Zugangsdaten an und lerne Theorie am Ort deiner Wahl.</p>
-
-    <form class="login-form" id="login-form" novalidate>
-      <div class="field">
-        <label for="login-user">Benutzername</label>
-        <input id="login-user" name="user" type="text" autocomplete="username" required>
-      </div>
-      <div class="field">
-        <label for="login-pass">Passwort</label>
-        <input id="login-pass" name="pass" type="password" autocomplete="current-password" required>
-      </div>
-      <button class="btn btn--primary btn--block" type="submit">Anmelden
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-      <p class="login-dialog__note" id="login-note" hidden></p>
-    </form>
-
-    <p class="login-dialog__foot">Noch kein Account? <a href="anmeldung.html">Neuanmeldung</a></p>
-  </div>
-</dialog>
 
 </body>
 </html>

@@ -807,3 +807,210 @@ h4,.h4{font-size:1.0625rem;font-weight:600;line-height:1.4}
 .text-center{text-align:center}
 .actions{display:flex;flex-wrap:wrap;gap:13px}
 .actions--center{justify-content:center}
+
+/* ==========================================================================
+   Update 11/2026 · Original-Logo, mehr Gelb, Preistabellen, Foto-Galerie
+   ========================================================================== */
+:root{--wa-yellow-mid:#FFF1A8}
+
+/* --- Original-Logo (Bild 1:1 von der bisherigen Website) ---------------- */
+.logo__img{height:92px;width:auto;transition:height .3s var(--ease)}
+.site-header.is-stuck .logo__img{height:70px}
+.nav{min-height:108px}
+.site-header.is-stuck .nav{min-height:84px}
+.logo--on-dark .logo__img{height:120px}
+@media (max-width:1180px){.logo__img{height:76px}}
+@media (max-width:560px){.logo__img{height:62px}.site-header.is-stuck .logo__img{height:54px}.nav{min-height:84px}}
+
+/* --- Mehr Gelb ---------------------------------------------------------- */
+.site-header{border-bottom:4px solid var(--wa-yellow)}
+.nav__link--price{position:relative}
+.nav__link--price::before{
+  content:"";position:absolute;top:8px;right:2px;width:7px;height:7px;border-radius:50%;
+  background:var(--wa-red);box-shadow:0 0 0 2px #fff;
+}
+@media (max-width:1024px){.nav__link--price::before{top:50%;right:14px;transform:translateY(-50%)}}
+
+.page-hero{background:var(--wa-yellow);border-bottom:0}
+.page-hero .kicker,.page-hero .breadcrumb,.page-hero .breadcrumb a{color:var(--wa-black)}
+.page-hero p{color:var(--wa-ink)}
+
+.divider{height:4px;background:var(--wa-yellow);width:min(160px,30%);margin:0 auto;border-radius:4px}
+.section--yellow{background:var(--wa-yellow-soft)}
+.section--yellow-strong{background:var(--wa-yellow)}
+.section--yellow-strong .kicker{color:var(--wa-black)}
+.section--yellow-strong .fill-text{color:var(--wa-black)!important;background:none!important;-webkit-text-fill-color:currentColor!important}
+
+.class-card,.num-card{border-top:4px solid var(--wa-yellow)}
+.cta-band{background:var(--wa-yellow);border-color:var(--wa-yellow)}
+.cta-band::before{background:var(--wa-red)}
+.cta-band p{color:var(--wa-ink)}
+.cta-band .btn--primary{--btn-bg:var(--wa-black);--btn-fg:#fff;--btn-bd:var(--wa-black)}
+.site-footer{border-top:6px solid var(--wa-yellow)}
+.acc[open]{border-color:var(--wa-yellow);box-shadow:0 0 0 2px var(--wa-yellow)}
+.notice:not(.notice--red){background:var(--wa-yellow-soft)}
+
+/* --- Preistabellen (ein Baustein für alle Tabellen) --------------------- */
+.ptable-card{background:#fff;border:1px solid #DADADA;border-radius:16px;box-shadow:var(--shadow-sm);overflow:hidden}
+.ptable-card__head{
+  display:flex;align-items:center;gap:14px;padding:16px 22px;
+  background:var(--wa-yellow);border-bottom:1px solid #E8BD00;
+}
+.ptable-card__title{font-family:var(--font-ui);font-weight:800;font-size:1.0625rem;color:var(--wa-black);line-height:1.3}
+.ptable-card__sub{font-size:.875rem;color:var(--wa-ink);opacity:.75;line-height:1.3}
+.ptable-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.ptable{width:100%;border-collapse:separate;border-spacing:0;font-size:.9688rem;font-variant-numeric:tabular-nums;background:#fff}
+.ptable thead th{
+  background:var(--wa-black);color:#fff;font-family:var(--font-ui);font-size:.75rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:13px 22px;white-space:nowrap;
+}
+.ptable thead th + th{border-left:1px solid rgba(255,255,255,.14)}
+.ptable tbody th,.ptable tbody td{padding:14px 22px;border-bottom:1px solid #ECECEC;text-align:left;vertical-align:middle;line-height:1.4}
+.ptable tbody th{font-weight:600;color:var(--wa-ink)}
+.ptable tbody td{color:var(--wa-grey)}
+.ptable tbody th + td,.ptable tbody td + td{border-left:1px solid #ECECEC}
+.ptable tbody tr:last-child > *{border-bottom:0}
+.ptable .num{text-align:right;white-space:nowrap}
+.ptable thead th.num{text-align:right}
+.ptable td.price{color:var(--wa-black);font-weight:800;font-size:1.0313rem}
+.ptable td.price--ask{color:var(--wa-grey);font-weight:600;font-size:.9375rem}
+.ptable tr.ptable__group > th{
+  background:var(--wa-yellow-soft);color:var(--wa-black);font-family:var(--font-ui);
+  font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  padding:10px 22px;border-bottom:1px solid #F3E3A0;
+}
+.ptable tbody tr:not(.ptable__group):hover > *{background:#FFFBEA}
+.ptable small{display:block;font-weight:400;font-size:.8125rem;color:var(--wa-grey-light);margin-top:2px}
+.ptable a{color:inherit;text-decoration:underline;text-decoration-color:var(--wa-yellow);text-decoration-thickness:2px;text-underline-offset:3px}
+.ptag{
+  display:inline-grid;place-items:center;min-width:46px;height:30px;padding:0 9px;border-radius:8px;
+  background:var(--wa-yellow);color:var(--wa-black);font-family:var(--font-ui);font-weight:800;font-size:.875rem;white-space:nowrap;
+}
+.ptag--dark{background:var(--wa-black);color:var(--wa-yellow)}
+.only-mobile{display:none!important}
+@media (max-width:600px){
+  .ptable tbody th,.ptable tbody td{padding:12px 14px}
+  .ptable thead th{padding:12px 14px}
+  .ptable tr.ptable__group > th{padding:9px 14px}
+  .ptable .hide-mobile{display:none}
+  .only-mobile{display:block!important}
+}
+
+/* Klassen-Auswahl */
+.class-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.class-tab{
+  min-height:44px;min-width:56px;padding:8px 16px;border-radius:10px;
+  border:1.5px solid #D6D6D6;background:#fff;color:var(--wa-black);
+  font-family:var(--font-ui);font-weight:800;font-size:.9375rem;white-space:nowrap;
+  transition:background-color .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);
+}
+.class-tab:hover{border-color:var(--wa-black)}
+.class-tab[aria-selected="true"]{background:var(--wa-yellow);border-color:var(--wa-yellow);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18)}
+@media (max-width:600px){
+  .class-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter)}
+  .class-tabs::-webkit-scrollbar{display:none}
+}
+
+/* Preisseite: Layout */
+.price-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start}
+.price-aside{position:sticky;top:130px;background:var(--wa-yellow);border-radius:16px;padding:24px}
+.price-aside h3{font-family:var(--font-ui);font-size:1.0625rem;font-weight:800}
+.price-aside ul{margin-top:12px;display:grid;gap:10px}
+.price-aside li{position:relative;padding-left:20px;font-size:.9375rem;line-height:1.5}
+.price-aside li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--wa-red)}
+.price-aside .btn{width:100%;margin-top:18px}
+.price-aside .btn--primary{--btn-bg:var(--wa-black);--btn-fg:#fff;--btn-bd:var(--wa-black)}
+.price-aside .btn + .btn{margin-top:10px}
+.price-aside .btn--ghost{--btn-bd:var(--wa-black)}
+@media (max-width:980px){.price-layout{grid-template-columns:1fr}.price-aside{position:static}}
+.price-duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+@media (max-width:900px){.price-duo{grid-template-columns:1fr}}
+
+/* Vergleichstabelle aller Klassen */
+.ptable--compare{table-layout:fixed;min-width:1040px}
+.ptable--compare col.c-label{width:250px}
+.ptable--compare thead th{text-align:center;padding:14px 6px;font-size:.9375rem;letter-spacing:0;text-transform:none;color:var(--wa-yellow)}
+.ptable--compare thead th:first-child{text-align:left;padding-left:22px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.ptable--compare tbody td{text-align:center;padding:14px 6px;color:var(--wa-black);font-weight:700}
+.ptable--compare tbody td.is-empty{color:#C4C4C4;font-weight:400}
+.ptable--compare tbody th{padding:14px 18px 14px 22px}
+.ptable--compare tbody th,.ptable--compare thead th:first-child{position:sticky;left:0;z-index:1}
+.ptable--compare tbody th{background:#fff;box-shadow:1px 0 0 #DADADA}
+.ptable--compare thead th:first-child{background:var(--wa-black);z-index:2}
+.ptable--compare tr.ptable__group > th{position:sticky;left:0;background:var(--wa-yellow-soft)}
+.ptable--compare tbody tr:nth-child(even):not(.ptable__group) > *{background:#FCFCFC}
+.ptable--compare tbody tr:not(.ptable__group):hover > *{background:#FFF6CC}
+.compare-hint{display:none;margin-top:10px;font-size:.875rem;color:var(--wa-grey)}
+@media (max-width:1100px){.compare-hint{display:block}}
+@media (max-width:600px){.ptable--compare col.c-label{width:160px}.ptable--compare tbody th{padding:12px 10px 12px 14px;font-size:.875rem}.ptable--compare thead th:first-child{padding-left:14px}}
+.price-notes{font-size:.875rem;color:var(--wa-grey);display:grid;gap:4px;margin-top:16px;max-width:820px}
+
+/* Preisseite: Abstände */
+.page--preise .section{padding-block:clamp(44px,5vw,72px)}
+.page--preise .section-head{margin-bottom:24px}
+.page--preise .section-head h2{font-size:clamp(1.6rem,2.6vw,2.15rem)}
+.page--preise .page-hero{padding-block:clamp(32px,4vw,52px) clamp(28px,3vw,40px)}
+.page--preise .page-hero h1{font-size:clamp(1.9rem,3.4vw,2.75rem)}
+
+/* Startseite: Preise auf einen Blick */
+.price-home{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);align-items:center}
+.price-home .actions{margin-top:24px}
+.price-home__note{margin-top:10px;font-size:.8125rem;color:var(--wa-grey)}
+@media (max-width:900px){.price-home{grid-template-columns:1fr}}
+
+/* --- Foto-Galerie (kleine Vorschaubilder, Klick = groß) ----------------- */
+.photo-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.photo-strip__item{
+  display:block;aspect-ratio:4/3;border-radius:12px;overflow:hidden;border:3px solid #fff;
+  box-shadow:var(--shadow-sm);background:#EEE;cursor:zoom-in;
+}
+.photo-strip__item img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.photo-strip__item:hover img{transform:scale(1.06)}
+.photo-strip__item--sign img{object-position:50% 25%}
+@media (max-width:900px){
+  .photo-strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+  .photo-strip::-webkit-scrollbar{display:none}
+  .photo-strip__item{flex:0 0 40%;scroll-snap-align:start}
+}
+@media (max-width:560px){.photo-strip__item{flex-basis:62%}}
+.section--photos{padding-block:clamp(40px,5vw,64px)}
+.section--photos .section-head{margin-bottom:22px}
+.section--photos .section-head h2{font-size:clamp(1.5rem,2.4vw,2rem)}
+
+.lightbox{border:0;padding:0;background:transparent;max-width:min(92vw,1200px);max-height:92vh}
+.lightbox::backdrop{background:rgba(0,0,0,.82)}
+.lightbox img{max-width:min(92vw,1200px);max-height:86vh;width:auto;height:auto;border-radius:12px;display:block}
+.lightbox__close{
+  position:fixed;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:0;
+  background:var(--wa-yellow);color:var(--wa-black);font-size:1.5rem;font-weight:800;line-height:1;
+}
+
+/* Feinschliff */
+.section--yellow-strong .kicker::before,.page-hero .kicker::before,.price-aside .kicker::before{background:var(--wa-black)!important}
+.section--yellow .kicker::before{background:var(--wa-red)!important}
+.section--yellow + .divider,.section--yellow-strong + .divider,
+.divider:has(+ .section--yellow),.divider:has(+ .section--yellow-strong){display:none}
+.ptable--compare col.c-label{width:300px}
+@media (max-width:600px){.ptable--compare col.c-label{width:160px}}
+@media (max-width:980px){.price-layout{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.price-duo{grid-template-columns:minmax(0,1fr)}.price-home{grid-template-columns:minmax(0,1fr)}}
+.price-duo{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.price-duo{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){.ptable tbody th small.only-mobile{margin-top:6px;font-size:.8125rem;line-height:1.35;color:var(--wa-grey)}}
+
+/* --- Filiale Freising: vorübergehend geschlossen ------------------------ */
+.closed-tag{
+  display:inline-block;padding:3px 10px;border-radius:999px;background:var(--wa-red);color:#fff;
+  font-family:var(--font-ui);font-size:.75rem;font-weight:700;letter-spacing:.02em;line-height:1.5;white-space:nowrap;
+}
+.location__head{flex-wrap:wrap}
+.location__head .closed-tag{margin-left:auto}
+.closed-note{
+  display:flex;gap:12px;align-items:flex-start;margin:4px 0 16px;padding:14px 16px;border-radius:12px;
+  background:var(--wa-red-soft);border:1px solid #F5C2C8;color:var(--wa-ink);
+}
+.closed-note svg{width:22px;height:22px;flex:none;color:var(--wa-red);margin-top:2px}
+.closed-note p{margin:0;font-size:.9375rem;line-height:1.55}
+.closed-note strong{color:var(--wa-red-deep)}
+.footer-hours .closed-tag{margin:4px 0 2px}
+.info__value .closed-tag{margin-bottom:6px}

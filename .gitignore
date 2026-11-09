@@ -13,3 +13,9 @@ node_modules/
 
 # Alte Fassung mit dem Fahrlehrer — ersetzt durch praxis-fahrschueler.jpg
 assets/img/praxis-fahrstunde.jpg
+
+# Rohmaterial vom Kunden (WhatsApp-ZIPs, Originalfotos) — optimierte Fassungen liegen in assets/img/
+Bilder/
+
+# Lokale Claude-Code-Einstellungen
+.claude/
